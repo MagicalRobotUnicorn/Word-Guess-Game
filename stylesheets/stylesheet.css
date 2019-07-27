@@ -25,7 +25,32 @@ body {
 }
 
 #playfield {
-  background-image: url(../assets/backgrounds/Splatter-Clipart-PNG-Image-06.png);
+  background-image: url(../splash.png);
+  padding-left: 10px;
+  margin-left: -10px;
+}
+
+#artist-photo {
+  width: 600px;
+  height: 600px;
+  background: blue;
+  align-content: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  margin-right: auto;
+  margin-left: auto;
+
+  /* font-family: 'Metal Mania', cursive;
+  font-size: 150px;
+  color: white; */
+}
+
+#question-mark {
+  font-family: 'Metal Mania', cursive;
+  font-size: 400px;
+  color: white;
+  align-content: center;
+  margin: 225px;
 }
 
 
