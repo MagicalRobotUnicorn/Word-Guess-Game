@@ -11,7 +11,7 @@ var nameArray;
 var bandArray = [];
 
 function decideBand() {
-  var randomNumber = Math.floor((Math.random() * 6) + 1);
+  var randomNumber = Math.floor(Math.random() * bands.length + 1);
   band = bands[randomNumber - 1];
 }
 
@@ -42,11 +42,11 @@ function guessLetter(letter) {
     numGuesses++;
     guessedLetters.push(letter);
 
-    while (index != -1){
+    while (index !== -1){
       incompleteWord[index] = bandArray[index];
-      // numCorrect++;
+      numCorrect++;
 
-      index = bandArray.indexOf(letter);
+      index = bandArray.indexOf(letter, index + 1);
     }
     // for (var i=0; i < bandArray.length; i++){
     //   if (bandArray[i] == letter) {
@@ -77,10 +77,16 @@ function checkLetter(letter, array) {
 }
 
 function checkVictory() {
-  for (var i= 0; i < bandArray.length; i++){
-    if (incompleteWord[i] == "_"){
-      return false;
-    }
+  // for (var i= 0; i < incompleteWord.length; i++){
+  //   if (incompleteWord[i] == "_"){
+  //     return false;
+  //   }
+  // }
+  if (checkLetter(("_"), incompleteWord)) {
+    return false;
+  }
+  else {
+    return true;
   }
 
   return true;
@@ -96,7 +102,7 @@ function mainGame() {
   decideBand();
   convertWord();
 
-  while (true){
+  while (!checkVictory()){
     console.log("Guess a letter");
     console.log(incompleteWord);
     var input = prompt();
@@ -104,14 +110,8 @@ function mainGame() {
     console.log("Number correct: ", numCorrect);
     console.log("Guessed Letters: ", guessedLetters);
     console.log("Number of Guesses: ", numGuesses );
-
-    if (checkVictory()) {
-      console.log("You won! The band was: ", band);
-      console.log(incompleteWord)
-      break;
-    }
-    else {
-      continue;
-    }
   }
+
+  console.log("You won! The band was: ", band);
+  console.log(incompleteWord)
 }
