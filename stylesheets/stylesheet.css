@@ -30,6 +30,39 @@ body {
   margin-left: -10px;
 }
 
+#displayletters {
+  height: 250px;
+  width: auto;
+  background-color: aliceblue;
+  font-family: 'Nosifer', cursive;
+  color: black;
+  align-content: center;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#incompleteword {
+  height: 250px;
+  width: auto;
+  background-color: aliceblue;
+  font-family: 'Nosifer', cursive;
+  color: black;
+  align-content: center;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#statistics {
+  height: 250px;
+  width: auto;
+  background-color: aliceblue;
+  font-family: 'Nosifer', cursive;
+  color: black;
+  align-content: center;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
 #artist-photo {
   width: 600px;
   height: 600px;

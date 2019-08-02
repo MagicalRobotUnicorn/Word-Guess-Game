@@ -4,6 +4,7 @@
 <head>
   <title>Will It Metal?</title>
   <link href="https://fonts.googleapis.com/css?family=Metal+Mania|Nosifer&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <link rel="stylesheet" href="stylesheets/stylesheet.css">
 </head>
 <!-- <header id="header">
@@ -30,8 +31,32 @@
     </div>
 
 
+    <!-- TODO:
+    * Use script from last assignment to capture keyboard event
+    * Use keyboard event for the input to the console game
+    * Update statistics and letters divs with information outputted from the console.
+    
+    ******
+
+    After Win Condition:
+    Update Artist Photo (With fade it from Jquery example on Youtube)
+    Update buttons field for pause music and play again
+    Animate win condition letters? -->
+
     <div id="playfield">
 
+      <div id="displayletters">
+        <h1>Guessed Letters:</h1>
+        <h1><div id="guessedletters">
+          
+        </div></h1>
+      </div>
+      <div id="incompleteword">
+          <h1>Word So Far:</h1>
+          <h1><div id="inprogressword">
+            
+          </div></h1>
+        </div>
       <div id="artist-photo">
         <div id="question-mark">?</div>
       </div>
@@ -39,18 +64,24 @@
 
       </div>
       <div id="buttons">
+        
+      </div>
+      <h1>
+        <br />
+        <br />
+        <br />
+        <br />
+      <div id="statistics">
 
       </div>
-      <div id="statists">
-
-      </div>
+      </h1>
       <div id="letters">
 
       </div>
     </div>
   </div>
+<script src="javascript.js"></script>
 </body>
-
 </html>
 
 <!-- font-family: 'Nosifer', cursive;
