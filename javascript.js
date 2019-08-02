@@ -10,15 +10,6 @@ var guessedLetters = [];
 var nameArray;
 var bandArray = [];
 
-// document.addEventListener('keydown', logKey);
-
-function logKey(typed_letter) {
-
-   console.log(typed_letter);
-    return typed_letter;
-}
-
-
 function decideBand() {
   var randomNumber = Math.floor(Math.random() * bands.length + 1);
   band = bands[randomNumber - 1].toLowerCase();
@@ -30,7 +21,6 @@ function convertWord() {
   console.log(nameArray);
   console.log(nameLength);
 
-  // nameLength = nameArray.length;
   for (var i = 0; i < bandArray.length; i++) {
     if (bandArray[i] == " ") {
       nameLength--;
@@ -63,20 +53,8 @@ function guessLetter(letter) {
       numCorrect++;
 
       index = bandArray.indexOf(letter, index + 1);
+      numGuesses++;
 
-      // for (var i=0; i < bandArray.length; i++){
-      //   if (bandArray[i] == letter) {
-      //     incompleteWord[i] = letter;
-      //     // nameLength--;
-      //     guessedLetters.push(letter);
-      //     numCorrect++;
-      //     numGuesses++;
-      //   }
-      // }
-      // if (!checkLetter(letter, guessedLetters)) {
-      //   guessedLetters.push(letter);
-      //   numGuesses++;
-      // }
       document.getElementById("statistics").innerHTML = "Number correct: " + numCorrect + "  | Guessed Letters: " + guessedLetters + "  | Number of Guesses: " + numGuesses;
       document.getElementById("guessedletters").innerHTML = upperString(guessedLetters);
       document.getElementById("inprogressword").innerHTML = upperString(incompleteWord);
@@ -97,11 +75,7 @@ function checkLetter(letter, array) {
 }
 
 function checkVictory() {
-  // for (var i= 0; i < incompleteWord.length; i++){
-  //   if (incompleteWord[i] == "_"){
-  //     return false;
-  //   }
-  // }
+
   if (checkLetter(("_"), incompleteWord)) {
     return false;
   }
@@ -111,63 +85,34 @@ function checkVictory() {
 
 }
 
+// WRTIE BOTH OF THESE TONIGHT
+// REWRITE 'ALREADY GUESSED' AS AN ALERT
 
-  decideBand();
-  convertWord();
+function winTriggered(){
 
-document.onkeyup = function(event) {  
-  //document.addEventListener('keydown', logKey);
+}
+
+function updatePage(){
+
+}
+
+
+decideBand();
+convertWord();
+
+document.onkeyup = function(event) {
+  console.log(event);
+
   var letter = event.key.toLowerCase();
 
-
-  while (!checkVictory()) {
-    // var letter = event.key.toLowerCase();
-    //if (prompt("Would you like to continue?")){
-    // var letter = prompt("Guess a letter!");
     guessLetter(letter);
-    // console.log("Guess a letter");
     console.log(incompleteWord);
-    // var input = prompt();
-    // guessLetter(input);
     console.log("Number correct: ", numCorrect);
     console.log("Guessed Letters: ", guessedLetters);
     console.log("Number of Guesses: ", numGuesses);
-    // document.getElementById('artist-name').innerHTML = incompleteWord;
-    // document.getElementById("statistics").innerHTML = "Number correct: " + numCorrect + "  | Guessed Letters: " + guessedLetters + "  | Number of Guesses: " + numGuesses;
-
-
-  }
-    console.log("You won! The band was: ", band);
-    console.log(incompleteWord);
+  
+    if (checkVictory()){
+      console.log("You won! The band was: ", band);
+      console.log(incompleteWord);
+    }
 }
-    // document.getElementById('buttons').innerHTML = "You won! The band was: " + band;
-
-// }
-
-
-// mainGame();
-
-// $(document).ready(function() {
-//   decideBand();
-//   convertWord();
-
-  // while (!checkVictory()){
-  //   // Console Game Working
-  //   // console.log("Guess a letter");
-  //   // console.log(incompleteWord);
-  //   // var input = prompt();
-  //   // guessLetter(input);
-  //   // console.log("Number correct: ", numCorrect);
-  //   // console.log("Guessed Letters: ", guessedLetters);
-  //   // console.log("Number of Guesses: ", numGuesses );
-  //   // document.onkeyup = function(event) {
-
-  //   //   // Captures the key press, converts it to lowercase, and saves it to a variable.
-  //     // var letter = event.key.toLowerCase();
-  //     // guessLetter(letter);
-  // };
-
-  // console.log("You won! The band was: ", band);
-  // console.log(incompleteWord)
-
-
