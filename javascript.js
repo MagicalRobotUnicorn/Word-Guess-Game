@@ -89,7 +89,18 @@ function checkVictory() {
 // REWRITE 'ALREADY GUESSED' AS AN ALERT
 
 function winTriggered(){
+  var photoFilename = "./assets/images/" + band.replace(" ", "") + ".jpg";
+  var musicFilename = "./assets/" + band.replace(" ", "") + ".mp3";
 
+  document.getElementById("question-mark").innerHTML = '<img src="' + photoFilename + '">'
+
+
+  document.getElementById("audio").innerHTML = '<audio id="myAudio"> <source src="' + musicFilename + '" type="audio/mpeg"></audio>';
+
+  document.getElementById("myAudio").play();
+// Update buttons
+// CSS Animations
+// Play music
 }
 
 function updatePage(){
@@ -112,7 +123,6 @@ document.onkeyup = function(event) {
     console.log("Number of Guesses: ", numGuesses);
   
     if (checkVictory()){
-      console.log("You won! The band was: ", band);
-      console.log(incompleteWord);
+      winTriggered();
     }
 }

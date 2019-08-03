@@ -3,15 +3,12 @@ body {
 }
 
 #header {
-  /* background-image: url(../assets/backgrounds/splash.png); */
   align-content: center;
 }
 
 #logo {
   margin-left: auto;
   margin-right: auto;
-  /* align-content: center; */
-  /* float: right; */
 }
 .total-content {
   width: 960px;
@@ -72,10 +69,6 @@ body {
   margin-bottom: 40px;
   margin-right: auto;
   margin-left: auto;
-
-  /* font-family: 'Metal Mania', cursive;
-  font-size: 150px;
-  color: white; */
 }
 
 #question-mark {
@@ -85,7 +78,3 @@ body {
   align-content: center;
   margin: 225px;
 }
-
-
-/* <!-- font-family: 'Nosifer', cursive;
-font-family: 'Metal Mania', cursive; --> */
