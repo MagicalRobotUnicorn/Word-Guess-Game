@@ -1,0 +1,78 @@
+<html>
+  <head>
+    <title></title>
+
+      <style>
+      #outerbox {
+        background: brown;
+        width: 750px;
+        height: auto;
+        z-index: -20;
+      }
+      #innerbox {
+        background: red;
+        height: 500px;
+        width: 500px;
+        position: relative;
+        margin-top: -130px;
+        margin-left: 75px;
+        margin-right: auto;
+        z-index: 10;
+        opacity: .5;
+        align-content: center; 
+      }
+      #devilleft {
+        height: 40%;
+        width: auto;
+        left:0px;
+        top: 15px;
+        position: relative;
+        z-index: 20;
+
+      }
+      #devilright {
+        right:-35px;
+        top: 25px;
+        position: relative;
+        z-index: 20;
+      }
+
+      .mainphoto {
+        height: 450px;
+        width: auto;
+        margin-left: 20px;
+        margin-top: 20px;
+      }
+
+      /* .cf {
+        position:relative;
+        height:281px;
+      width:450px;
+  margin:0 auto;
+}
+
+.cf img {
+  position: relative;
+  left:0;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+
+.cf img.top:hover {
+  opacity:0;
+}
+       */
+    </style>
+  </head>
+  <body>
+    <div id="outerbox">
+      <img src="assets/images/devilleft.png" id="devilleft"><img src="assets/images/devilright.png" id="devilright">
+      <!-- <img src="assets/images/tool.jpg" class="mainphoto cf top"> -->
+      <div id="innerbox">
+        <img src="assets/images/pentagram.png" class="mainphoto">
+      </div>
+    </div>
+  </body>
+</html>

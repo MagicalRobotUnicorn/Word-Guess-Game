@@ -117,10 +117,6 @@ document.onkeyup = function(event) {
   var letter = event.key.toLowerCase();
 
     guessLetter(letter);
-    console.log(incompleteWord);
-    console.log("Number correct: ", numCorrect);
-    console.log("Guessed Letters: ", guessedLetters);
-    console.log("Number of Guesses: ", numGuesses);
   
     if (checkVictory()){
       winTriggered();
