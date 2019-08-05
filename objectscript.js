@@ -106,7 +106,7 @@ var game = {
       location.reload();
     });
 
-    document.getElementById("skull").id = "skullwin";
+    // document.getElementById("skull").id = "skullwin";
 
 
     // CSS Animations
