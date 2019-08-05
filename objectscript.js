@@ -89,13 +89,15 @@ var game = {
     var photoFilename = "./assets/images/" + this.band.replace(" ", "") + ".jpg";
     var musicFilename = "./assets/" + this.band.replace(" ", "") + ".mp3";
 
-    document.getElementById("artist-photo").innerHTML = '<img src="' + photoFilename + '" class="mainphoto">';
+    document.getElementById("artist-photo").innerHTML = '<img src="' + photoFilename + '" class="mainphoto shadow">';
 
 
     document.getElementById("audio").innerHTML = '<audio id="myAudio"> <source src="' + musicFilename + '" type="audio/mpeg"></audio>';
 
     document.getElementById("myAudio").play();
     // Update buttons
+    // document.getElementsByClassName("skull").classList.add("skullwin");
+
     document.getElementById("buttons").innerHTML = '<button type="button" class="btn btn-secondary btn-lg" id="pause"><h1>Pause Audio</h1></button><button type="button" class="btn btn-secondary btn-lg" id="reload"><h1>Play Again</h1></button>';
     (document.getElementById("pause")).addEventListener("click", function () {
       document.getElementById("myAudio").pause();
@@ -103,6 +105,8 @@ var game = {
     (document.getElementById("reload")).addEventListener("click", function () {
       location.reload();
     });
+
+    document.getElementById("skull").id = "skullwin";
 
 
     // CSS Animations

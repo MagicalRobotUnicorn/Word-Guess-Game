@@ -124,6 +124,12 @@ body {
   margin-top: 30px;
 }
 
+#buttons {
+  font-family: 'Metal Mania', cursive;
+  text-align: center;
+  color: white;
+  font-size: 60px;
+}
 #pause {
   font-family: 'Metal Mania', cursive;
   float: left;
@@ -140,4 +146,25 @@ body {
 .shadow {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 25px;
+}
+
+#clipart {
+  align-content: center;
+  z-index: -10;
+}
+
+#skull {
+  width: 450px;
+  height: auto;
+  padding-top: 40px;
+  margin-left: 30px;
+  z-index: -10;
+}
+
+#skullwin {
+  width: 450px;
+  height: auto;
+  margin-left: 30px;
+  z-index: -10;
+  padding-top: 75px;
 }
