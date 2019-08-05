@@ -39,9 +39,10 @@ function upperString(array){
   }
   return returnString;
 }
+
 function guessLetter(letter) {
   if ((checkLetter(letter, guessedLetters))) {
-    console.log("You already guessed that!");
+    alert("You already guessed that!");
   }
   else {
     var index = bandArray.indexOf(letter);
@@ -53,12 +54,11 @@ function guessLetter(letter) {
       numCorrect++;
 
       index = bandArray.indexOf(letter, index + 1);
-      numGuesses++;
-
-      document.getElementById("statistics").innerHTML = "Number correct: " + numCorrect + "  | Guessed Letters: " + guessedLetters + "  | Number of Guesses: " + numGuesses;
+    }
+      document.getElementById("numCorrect").innerHTML = numCorrect;
+      document.getElementById("numGuesses").innerHTML = numGuesses;
       document.getElementById("guessedletters").innerHTML = upperString(guessedLetters);
       document.getElementById("inprogressword").innerHTML = upperString(incompleteWord);
-    }
   }
 }
 
@@ -85,23 +85,30 @@ function checkVictory() {
 
 }
 
-// WRTIE BOTH OF THESE TONIGHT
-// REWRITE 'ALREADY GUESSED' AS AN ALERT
-
 function winTriggered(){
   var photoFilename = "./assets/images/" + band.replace(" ", "") + ".jpg";
   var musicFilename = "./assets/" + band.replace(" ", "") + ".mp3";
 
-  document.getElementById("question-mark").innerHTML = '<img src="' + photoFilename + '">'
+  document.getElementById("artist-photo").innerHTML = '<img src="' + photoFilename + '" class="mainphoto">';
 
 
   document.getElementById("audio").innerHTML = '<audio id="myAudio"> <source src="' + musicFilename + '" type="audio/mpeg"></audio>';
 
   document.getElementById("myAudio").play();
 // Update buttons
+  document.getElementById("buttons").innerHTML = '<button type="button" class="btn btn-secondary btn-lg" id="pause"><h1>Pause Audio</h1></button><button type="button" class="btn btn-secondary btn-lg" id="reload"><h1>Play Again</h1></button>';
+  (document.getElementById("pause")).addEventListener("click", function(){
+    document.getElementById("myAudio").pause();
+  });
+  (document.getElementById("reload")).addEventListener("click", function(){
+    location.reload();
+  });
+
+
 // CSS Animations
-// Play music
+
 }
+
 
 function updatePage(){
 
