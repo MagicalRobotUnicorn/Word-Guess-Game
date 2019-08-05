@@ -124,12 +124,18 @@ body {
   margin-top: 30px;
 }
 
+#buttons {
+  /* align-content: center; */
+}
 #pause {
   font-family: 'Metal Mania', cursive;
   float: left;
+  margin-left: 40px;
 }
 
 #reload {
   font-family: 'Metal Mania', cursive;
   float: right;
+  margin-left: 10px;
+  margin-right: -20px;
 }

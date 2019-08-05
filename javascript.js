@@ -16,10 +16,9 @@ function decideBand() {
 }
 
 function convertWord() {
+  // Band in the console (I left this in to aid in the grading of the assignment)
   console.log(band);
   bandArray = band.split("");
-  console.log(nameArray);
-  console.log(nameLength);
 
   for (var i = 0; i < bandArray.length; i++) {
     if (bandArray[i] == " ") {
