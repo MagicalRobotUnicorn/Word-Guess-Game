@@ -10,11 +10,7 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
-.total-content {
-  /* width: 960px; */
-  margin-left: auto;
-  margin-right: auto;
-}
+
 #intro {
   font-family: 'Metal Mania', cursive;
   font-size: 60px;
@@ -22,12 +18,6 @@ body {
   text-align: center;
   margin-bottom: 50px;
 }
-
-/* #playfield {
-  background-image: url(../splash.png);
-  padding-left: 10px;
-  margin-left: -10px;
-} */
 
 #displayletters {
   height: 250px;
@@ -65,56 +55,12 @@ body {
 #artist-photo {
   width: 500px;
   height: 500px;
-  /* background: rgb(94, 94, 150); */
   background: rgba(139, 18, 18, 0.925);
   align-content: center;
   margin-bottom: 40px;
   margin-right: auto;
   margin-left: auto;
   border: 2px, solid, black;
-}
-
-#question-mark {
-  font-family: 'Metal Mania', cursive;
-  font-size: 400px;
-  color: white;
-  align-content: center;
-  margin: 225px;
-}
-
-#outerbox {
-  /* background: green; */
-  width: 750px;
-  height: auto;
-  z-index: -20;
-}
-#innerbox {
-  background: red;
-  border: 2px solid black;
-  height: 500px;
-  width: 500px;
-  position: relative;
-  margin-top: -165px;
-  margin-left: 95px;
-  margin-right: auto;
-  z-index: 10;
-  opacity: .5;
-  align-content: center;
-}
-#devilleft {
-  height: 40%;
-  width: auto;
-  left:0px;
-  top: 15px;
-  position: relative;
-  z-index: 20;
-
-}
-#devilright {
-  right:0px;
-  top: -10px;
-  position: relative;
-  z-index: 20;
 }
 
 .mainphoto {
@@ -124,8 +70,8 @@ body {
   margin-right: 25px;
   margin-bottom: 25px;
   margin-top: 30px;
-  transition: opacity 1s ease-in-out;
 }
+
 
 #buttons {
   font-family: 'Metal Mania', cursive;
@@ -134,9 +80,10 @@ body {
   font-size: 60px;
 }
 
-#buttons p{
-  float: right;
+#buttons p {
+  margin-left: 70px;
 }
+
 #pause {
   font-family: 'Metal Mania', cursive;
   float: left;
@@ -167,11 +114,3 @@ body {
   margin-left: 30px;
   z-index: -10;
 }
-
-/* #skullwin {
-  width: 450px;
-  height: auto;
-  margin-left: 30px;
-  z-index: -10;
-  padding-top: 75px;
-} */

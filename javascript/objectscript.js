@@ -17,7 +17,6 @@ var game = {
   },
 
   convertWord: function () {
-    // Band in the console (I left this in to aid in the grading of the assignment)
     console.log(this.band);
     this.bandArray = this.band.split("");
 
@@ -95,23 +94,14 @@ var game = {
     document.getElementById("audio").innerHTML = '<audio id="myAudio"> <source src="' + musicFilename + '" type="audio/mpeg"></audio>';
 
     document.getElementById("myAudio").play();
-    // Update buttons
-    // document.getElementsByClassName("skull").classList.add("skullwin");
 
-    document.getElementById("buttons").innerHTML = '<button type="button" class="btn btn-secondary btn-lg" id="pause"><h1>Pause Audio</h1></button><button type="button" class="btn btn-secondary btn-lg" id="reload"><h1>Play Again</h1></button>';
+    document.getElementById("buttons").innerHTML = '<button type="button" class="btn btn-secondary btn-lg" id="pause"><h1>Stop Audio</h1></button><button type="button" class="btn btn-secondary btn-lg" id="reload"><h1>Reset Game</h1></button>';
     (document.getElementById("pause")).addEventListener("click", function () {
       document.getElementById("myAudio").pause();
     });
     (document.getElementById("reload")).addEventListener("click", function () {
       location.reload();
     });
-
-    // document.getElementById("skull").id = "skullwin";
-
-
-    // CSS Animations
-    // Update Page Function
-
   }
 }
 
